@@ -1,6 +1,20 @@
-body {
-    font-family: Arial;
-    background-color: black;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
     margin: 0;
-    padding: 0;
+
+    background-color: aqua;
+}
+
+.LoginContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
 }
