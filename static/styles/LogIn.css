@@ -7,14 +7,27 @@ body{
     width: 100%;
     margin: 0;
 
-    background-color: aqua;
+    background-color: black;
 }
 
 .LoginContainer{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
-    background-color: white;
+    padding: 75px;
+    background-color: mintcream;
     border-radius: 8px;
+    width: 500px;
+    height: 350px;
+}
+
+.ResizedTextBox{
+    width: 490px;
+    height: 75px;
+}
+
+.TextCentered{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
 }
