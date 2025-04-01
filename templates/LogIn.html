@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/static/styles/LogIn.css">
     <title>Login Page</title>
+
+    <!-- this is to initalise the login.js script to use for the buttons -->
+    <script>
+        src="/js/Login.js"
+    </script>
+
 </head>
 
 <body class="body">
@@ -12,14 +18,12 @@
     <div class="LoginContainer">
         <p class = "TextCentered"> LogIn</p>
         <label for="username"></label>
-        <input type="text" id="username" name ="username" placeholder="Username" class="ResizedTextBox">
+        <input type="text" id="username"  name ="username" placeholder="Username" class="ResizedTextBox">
         <label for="password"></label>
         <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
-        <input type="submit" id="submit" value="Submit" onclick="document.getElementById(submit)">
+        <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)">
         <input type="submit" id="Sign up" value="Sign up">
-        <script>
-            src="Login.js"
-        </script>
+
     </div>
 
 </body>
