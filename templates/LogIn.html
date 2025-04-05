@@ -21,8 +21,15 @@
         <input type="text" id="username"  name ="username" placeholder="Username" class="ResizedTextBox">
         <label for="password"></label>
         <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
-        <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)">
-        <input type="submit" id="Sign up" value="Sign up">
+
+        <div class="ButtonContainer">
+            <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)" class="ResizedButtons">
+
+            <form action="{{ url_for('signUp') }}" method="GET">
+                <input type="submit" id="Sign up" value="Sign up" class="ResizedButtons">
+            </form>
+
+        </div>
 
     </div>
 
