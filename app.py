@@ -11,7 +11,7 @@ def index():
 
 
 #this will be handling the signup page which we need to create
-@app.route('/SignUp', methods=['GET', 'POST'])
+@app.route('/signUp', methods=['GET', 'POST'])
 def signUp():
     return render_template("SignUp.html")
 
