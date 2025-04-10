@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="/static/styles/LogIn.css">
-        <title>Login Page</title>
+        <title>{% block title %}Login Page{% endblock %}</title>
 
         <!-- this is to initalise the login.js script to use for the buttons -->
         <script>
@@ -11,29 +11,30 @@
         </script>
 
     </head>
+    {% block content %}
+        <body class="body">
+            <!-- this is for the log in page and setting up the buttons -->
 
-    <body class="body">
-        <!-- this is for the log in page and setting up the buttons -->
+            <div class="LoginContainer">
 
-        <div class="LoginContainer">
+                <p class = "TextCentered"> LogIn</p>
 
-            <p class = "TextCentered"> LogIn</p>
+                <label for="username"></label>
+                <input type="text" id="username"  name ="username" placeholder="Username" class="ResizedTextBox">
 
-            <label for="username"></label>
-            <input type="text" id="username"  name ="username" placeholder="Username" class="ResizedTextBox">
+                <label for="password"></label>
+                <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
 
-            <label for="password"></label>
-            <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
+                <div class="ButtonContainer">
+                    <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)" class="ResizedButtons">
 
-            <div class="ButtonContainer">
-                <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)" class="ResizedButtons">
+                    <form action="{{ url_for('signUp') }}" method="GET">
+                        <input type="submit" id="Sign up" value="Sign up" class="ResizedButtons">
+                    </form>
 
-                <form action="{{ url_for('signUp') }}" method="GET">
-                    <input type="submit" id="Sign up" value="Sign up" class="ResizedButtons">
-                </form>
-
+                </div>
             </div>
-        </div>
 
-    </body>
+        </body>
+    {% endblock %}
 </html>

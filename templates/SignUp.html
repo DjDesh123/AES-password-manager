@@ -1,0 +1,20 @@
+{%  extends "LogIn.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}   <!-- this is for the log in page and setting up the buttons -->
+    <div class="LoginContainer">
+
+        <p class = "TextCentered"> SignUp</p>
+
+        <label for="username"></label>
+        <input type="text" id="username"  name ="username" placeholder="Username" class="ResizedTextBox">
+
+        <label for="password"></label>
+        <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
+
+        <div class="ButtonContainer">
+            <input type="submit" id="CreateAccount" value="Submit" class="ResizedButtons">
+        </div>
+    </div>
+{% endblock %}
