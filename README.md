@@ -10,6 +10,11 @@ This project is still under development. Therefore, the following has been imple
 - The JavaScript functionality for interacting with the backend is still in progress.
 - AES encryption and other core functionalities are yet to be implemented.
 
+
+- Added a databased that uses sql
+- created the jinja templates for the login and sign up page
+- created the files for argon2 and aes encryption 
+
 ## Current Features
 
 - **Login Page**: A clean and simple login interface to allow users to enter their credentials (functionality coming soon).
