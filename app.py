@@ -26,9 +26,12 @@ if __name__ == '__main__':
 
 
 
-# now we have the managerDashbaord created - it needs to be accessed if either the user creates an account OR if the user enters the correct credentials
-# this can only happen after the AES encryption is functioning to encrypt and decrypt the password to check between the Master password
-# need to also set up the encryption with an enternal library to do the aes encryption
-
-
-# need to use a quick local storage to then be able to access anywhere in the project like in the car program
+"""
+the plan is fairly simple for these next steps of the program 
+- create a js file for sign up page 
+- to use fetch syntax to send both login and signup.js to the argon2.py file
+- then pass the information to AES encryption 
+- put inside the LogInDatabase.py file
+- then check if the credentials in the database is correct for what the user enters 
+- to then redirect the dashboard html file
+"""
