@@ -6,14 +6,12 @@
         <title>{% block title %}Login Page{% endblock %}</title>
 
         <!-- this is to initalise the login.js script to use for the buttons -->
-        <script>
-            src="/js/Login.js"
-        </script>
+       <script src="{{ url_for('static', filename='js/Login.js') }}"></script>
 
     </head>
     {% block content %}
         <body class="body">
-            <!-- this is for the log in page and setting up the buttons -->
+            <!-- this is for the login page and setting up the buttons -->
 
             <div class="LoginContainer">
 
@@ -26,7 +24,7 @@
                 <input type="password" id="password" name ="password" placeholder="Password" class="ResizedTextBox">
 
                 <div class="ButtonContainer">
-                    <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(Username,Password)" class="ResizedButtons">
+                    <input type="submit" id="submit" value="Submit" onclick="CheckCredentials(event)" class="ResizedButtons">
 
                     <form action="{{ url_for('signUp') }}" method="GET">
                         <input type="submit" id="Sign up" value="Sign up" class="ResizedButtons">
