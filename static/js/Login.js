@@ -7,9 +7,29 @@ function CheckCredentials(e){
     var userInput1 = document.getElementById("username").value;
     var userInput2 = document.getElementById("password").value;
 
+    // error handling if the user only enters one entry box
+    //this is to prevent future errors as we know that both entries have data inside
     if(!userInput1 || !userInput2){
         alert("both fields are required!");
     }
+
+    //calls the Flask route (aka the url endpoint)
+    fetch("/credentials/validate", {
+        //tells fetch to send a post request
+        method: "POST",
+        //sets a content type so Flask knows to parse JSON
+        headers: {
+            "Content-Type": "credentials/json"
+        },
+        // converts the JS objects into strings before sending
+        body: JSON.stringify(userInput1, userInput2)
+    })
+        //waits for the server response and convert it to JSON
+        .then(response => response.json())
+        //catch and log any network or server errors
+        .catch(error => {
+        console.error("ERROR:",error)
+    })
 
 
 }
