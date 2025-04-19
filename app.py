@@ -1,4 +1,6 @@
-from flask import Flask, render_template,redirect,url_for
+from flask import Flask, render_template,request
+from .encryption.argon2Hash import HashingPassword
+
 
 #constructer for the flask app and it sets up the application
 app = Flask(__name__)
@@ -19,6 +21,16 @@ def signUp():
 @app.route('/managerDashboard', methods=['GET', 'POST'])
 def managerDashboard():
     return render_template("managerDashboard.html")
+@app.route('/credentials/validate', methods=['POST'])
+def credentialsValidate():
+    #Get the JSON from request
+    username,password = (request.json['username'], request.json['password'])
+    print("credentials recieved",username,password)
+    return username,password
+
+@app.route('/credentials/add', methods=['GET', 'POST'])
+def credentialsAdd():
+    pass
 
 # makes the flask app run when this file is executed directly not when imported
 if __name__ == '__main__':
